@@ -2,7 +2,7 @@ ddlgenerator --force-key --drops --inserts --text postgresql provider.csv | psql
 ddlgenerator --force-key --drops --inserts --text postgresql tgap.csv | psql rad
 ddlgenerator --force-key --drops --inserts --text postgresql brown_resources.csv | psql rad
 
-cat normalize_surgeons2.sql | psql rad
+cat normalize_surgeons.sql | psql rad
 cat build_master.sql | psql rad
 
 wget -O ~/Dropbox/RAD/rad_resource.csv localhost:8080/resource/:csv

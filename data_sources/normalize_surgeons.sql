@@ -32,7 +32,6 @@ ALTER TABLE provider_procedure DROP COLUMN name,
                             DROP COLUMN phone, 
                             DROP COLUMN website,
                             DROP COLUMN location_code, 
-                            DROP COLUMN additional_procedures, 
                             DROP COLUMN additional_procedures;
 
 ALTER TABLE provider ADD COLUMN source text DEFAULT 'Eliot';
@@ -50,5 +49,3 @@ ALTER TABLE provider_procedure ALTER COLUMN procedure_id SET NOT NULL;
 ALTER TABLE provider_procedure ADD FOREIGN KEY (procedure_id) REFERENCES procedure (procedure_id);
 ALTER TABLE provider_procedure DROP COLUMN procedure;
 
-ALTER TABLE provider DROP COLUMN procedure;
-ALTER TABLE provider_procedure DROP COLUMN additional_procedures;
